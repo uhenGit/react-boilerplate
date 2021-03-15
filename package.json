@@ -1,0 +1,46 @@
+{
+  "name": "react-bp",
+  "version": "1.0.0",
+  "description": "ReactJS boilerplate with no-CRA",
+  "main": "client/index.js",
+  "scripts": {
+    "dev": "webpack serve --config ./webpack.config.dev.js --mode development",
+    "prod": "webpack --config ./webpack.config.prod.js --mode production"
+  },
+  "keywords": [
+    "ReactJS",
+    "Webpack",
+    "Babel"
+  ],
+  "author": "Eugene Nagorny",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "compression-webpack-plugin": "^7.1.2",
+    "css-loader": "^5.1.2",
+    "eslint": "^7.22.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.1.1",
+    "webpack": "^5.25.1",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
