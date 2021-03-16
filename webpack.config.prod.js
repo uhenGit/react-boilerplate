@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SOURCE = path.resolve(__dirname, './client');
 
 module.exports = {
@@ -12,8 +12,7 @@ module.exports = {
 	},
 	output: {
 		filename: "bundle.[chunkhash].js",
-		path: path.resolve(__dirname, 'dist'),
-		publicPath:'/'
+		path: path.resolve(__dirname, 'dist')
 	},
 	mode: "production",
 	optimization: {
@@ -21,6 +20,9 @@ module.exports = {
 		minimizer: [new TerserPlugin()]
 	},
 	plugins: [
+		new HtmlWebpackPlugin({
+			template: "./index.html"
+		}),
 		new webpack.DefinePlugin({
 			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
 		}),
